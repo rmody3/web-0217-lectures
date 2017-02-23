@@ -6,6 +6,7 @@
 
 # 1. As a first step
 # Please write out the domain model on this file
+
 # What we are concerned about is which tables have foreign keys
 # Don't stress: There may be multiple correct answers based on your conception of the problem.
 
@@ -17,6 +18,7 @@ id | title | author_id
 # author
 id | name |
 
+
 # Hints:
 # - The data always lives on the belongs to relationship
 # - Do the belongs_to first
@@ -24,6 +26,18 @@ id | name |
 # - If there is a many to many, we need a third table
 
 # Write your answer here.
+
+customers
+id | name
+
+restaurants
+id | name
+
+owners
+id | name | restaurant_id
+
+reviews
+id | description | customer_id | restaurant_id
 
 # 2. As a second step, please fill in the stubbed out methods in the respective model.
 # Customer#reviews

@@ -21,3 +21,12 @@
   # Restaurant#reviews
   # Restaurant#customers
     # should return all of the customers who have written reviews.
+
+# customer has many reviews and many restaurants, though reviews
+# reviews belong to a customer and a restaurant
+# restaurants has many reviews and many customers, through reviews
+
+# customer: name
+# review: description, restaurant_id, customer_id
+# restaurant: name
+#
