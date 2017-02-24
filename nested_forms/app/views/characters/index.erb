@@ -1,0 +1,4 @@
+<h1>Characters</h1>
+<% Character.all.each do |character| %>
+<p><a href=<%="/characters/#{character.id}"%>><%=character.name%></a></p>
+<% end %>
