@@ -7,11 +7,24 @@ class CharactersController < ApplicationController
     erb(:'characters/new')
   end
 
+  post('/characters') do
+    binding.pry
+
+    @character = Character.create(params)
+
+    redirect("/characters/#{@character.id}")
+  end
+
+  get('/characters/:id') do
+    @character = Character.find(params[:id])
+
+    erb(:'characters/show')
+  end
+
+  get('/characters') do
+    @characters = Character.all
+    erb(:'characters/index')
+    # 
+  end
+
 end
-
-
-# GOAL: make a characters/new form, which takes in the charcter name, and creates
-# a new character with that name.
-# After it creates the character, redirect_to the characters show page,
-# where we will display
-# the character's name.
