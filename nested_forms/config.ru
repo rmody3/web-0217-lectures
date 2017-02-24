@@ -1,4 +1,4 @@
 require_relative 'config/environment.rb'
 
-use UsersController
+use CharactersController
 run ApplicationController

@@ -7,7 +7,7 @@ gem 'activerecord'
 gem 'sinatra-activerecord'
 gem 'require_all'
 gem 'rspec'
+gem 'shotgun'
 gem 'pry-byebug'
 gem 'rake'
 gem 'sqlite3'
-
