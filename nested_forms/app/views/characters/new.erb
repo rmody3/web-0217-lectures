@@ -1,9 +1,12 @@
 <form action="/characters" method="POST">
-  <label for="">character name</label>
-  <input type="text" name="name">
+  <label for="character_name">character name</label>
+  <input id="character_name"type="text" name="character_attributes[name]">
+
   <label for=""> Actor name </label>
-  <input type="text" name="actor_name">
+  <input type="text" name="character_attributes[actor_name]">
+  <!-- {character_attributes: {actor_name}} -->
+  <!-- character_attributes[actor_name] -->
   <label for=""> Tv show name name </label>
-  <input type="text" name="tv_show_name">
+  <input type="text" name="character_attributes[tv_show_name]">
   <input type="submit" value="create a character">
 </form>
