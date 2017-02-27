@@ -1,6 +1,7 @@
 class Order
-  
-  def initialize
+
+  def initialize(customer, bill, item)
+
     @@all << self
   end
 

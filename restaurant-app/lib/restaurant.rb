@@ -1,7 +1,20 @@
 class Restaurant
+  attr_accessor :name
+  # def name
+  #   @name
+  # end
+  #
+  # def name=(name)
+  #   @name = name
+  # end
+
   def initialize(name)
     @name = name
   end
+
+  # def name
+  #   @name = 'bobby'
+  # end
 
   def waiters
     Waiter.all.select do |waiter|
@@ -19,8 +32,13 @@ class Restaurant
     Order.all.select do |order|
       order.bill.waiter.restaurant == self
     end
+  end
+  # orders -> [<order customer=<>>]
 
-
+  def customers
+    self.orders.map do |order|
+      order.customer
+    end
   end
 
 

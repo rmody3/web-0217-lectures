@@ -61,3 +61,14 @@ Dog.new()
   # 1. If it's a belongs to relationship -> the has to live on the model with the belongs_to
   # 2. If it's a has many, we cannot store the data on that item
   # 3.
+
+Array Iterators
+  I. Am I ok with the return value the same as my input array
+    -> Each
+  II.
+    Do I want the same number of elements as my input array?
+      -> Map
+    Do I want more than one, but fewer number
+      Select
+    Do I only want one element from the starting array  
+      Find/Detect
