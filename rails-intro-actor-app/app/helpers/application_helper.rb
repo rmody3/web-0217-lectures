@@ -13,15 +13,21 @@ module ApplicationHelper
     form.html_safe
   end
 
-  def label_tag()
-    # <label for="">name</label>
+  # label_tag('hometown', {id: 'users_hometown', for: 'users_hometown'})
+
+  def label_tag_by_us(text, options = {})
+    label = <<-HTML
+      <label for="#{options[:for]}">#{text}</label>
+    HTML
+    label.html_safe
   end
 
-  def text_field_tag()
-    # <input type="text" name="" value="">
+  # text_field_tag('user[hometown]', {value: 'philly'})
+  def text_field_tag(name_attribute, options)
+    "<input type="text" name="#{name_attribute}" value="#{options[:value]}">"
   end
 
-  def submit_tag
-    # <input type="submit" >
-  end
+  # def submit_tag
+  #   # <input type="submit" >
+  # end
 end
