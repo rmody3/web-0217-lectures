@@ -1,15 +1,16 @@
 # == Schema Information
 #
-# Table name: movies
+# Table name: characters
 #
 #  id         :integer          not null, primary key
-#  title      :string
-#  year       :integer
+#  name       :string
+#  movie_id   :integer
+#  actor_id   :integer
 #  created_at :datetime         not null
 #  updated_at :datetime         not null
 #
 
-class Movie < ApplicationRecord
-  has_many :characters
-  has_many :actors, through: :characters
+class Character < ApplicationRecord
+  belongs_to :movie
+  belongs_to :actor
 end
