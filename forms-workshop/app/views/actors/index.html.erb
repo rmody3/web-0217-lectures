@@ -1,0 +1,19 @@
+Search field
+
+<%= form_tag '/actors', method: 'get' do %>
+  <%= text_field_tag 'actor_name' %>
+  <%= submit_tag('search for a new actor') %>
+<% end %>
+
+
+
+
+
+
+<ul>
+<% @actors.each do |actor| %>
+  <li>
+    <%= actor.name %>
+  </li>
+<% end %>
+</ul>

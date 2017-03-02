@@ -1,19 +1,17 @@
 class ActorsController < ApplicationController
-  before_action :all_actors
+
 
   def new
     @actor = Actor.new
   end
 
   def create
-
-    @actor = Actor.create(params)
-    redirect_to "/actors/#{@actor.id}"
   end
 
   def index
-
-    @actors = Actor.all
+    @actor = Actor.new
+      @actors = Actor.all
+      # render 'actors/index.html.erb'
   end
 
 
@@ -27,9 +25,6 @@ class ActorsController < ApplicationController
   end
 
   private
-  def all_actors
-    @actors = Actor.all
-  end
   # def find_user
 end
 
