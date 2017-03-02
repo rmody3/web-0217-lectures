@@ -6,4 +6,6 @@ class Actor < ActiveRecord::Base
   #   select * from characters where characters.actor_id = ?
   #   self.id
   # end
+
+  
 end

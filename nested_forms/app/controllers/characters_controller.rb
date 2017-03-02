@@ -31,10 +31,18 @@ class CharactersController < ApplicationController
 end
 =======
   post('/characters') do
-    binding.pry
-
+    # params =  {"name"=>"Elaine Benis",
+    # "actor_name"=>"Julia Louis Dreyfuss",
+    # "tv_show_name"=>"Seinfeld"}
+    # 1. Find the related actor
+    # binding.pry
+    # Character.create({character_attributes: {name: 'vega',
+    #   actor_name: 'john',
+    #   tv_show_name: 'pulp fiction'}})
+    # character_attributes=()
     @character = Character.create(params)
 >>>>>>> f7c559a570581ac6b6341ccab99621c53d90b3cc
+
 
     redirect("/characters/#{@character.id}")
   end
@@ -48,7 +56,7 @@ end
   get('/characters') do
     @characters = Character.all
     erb(:'characters/index')
-    # 
+    #
   end
 
 end

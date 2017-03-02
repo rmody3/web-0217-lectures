@@ -1,0 +1,9 @@
+
+hello
+<%= form_tag('/actors') do %>
+  <%= label_tag_by_us('name', {for: 'hometown'}) %>
+  <%= text_field_tag('actors[name]') %>
+  <%= label_tag_by_us('hometown', {for: 'hometown'}) %>
+  <%= text_field_tag('actors[hometown]') %>
+  <%= submit_tag %>
+<% end %>

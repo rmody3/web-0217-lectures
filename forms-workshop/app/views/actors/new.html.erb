@@ -1,0 +1,7 @@
+
+hello
+<!-- <form action=<%= actors_path %> method="post"  -->
+<%= form_for @actor do |f| %>
+  <%= f.text_field :name %>
+  <%= f.submit %>
+<% end %>

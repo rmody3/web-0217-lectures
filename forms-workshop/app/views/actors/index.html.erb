@@ -1,0 +1,25 @@
+Search field
+
+<%= form_tag actors_path, method: 'get' do %>
+  <%= text_field_tag 'actor[name]' %>
+  <%= submit_tag('create a new actor') %>
+<% end %>
+
+
+
+<!-- GOAL: -->
+<!-- When you type in an actor's name, the index page then only displays -->
+<!-- The relevant actor that the user searched for -->
+
+<!-- When no one is searched for, then it should display all of the actors -->
+
+
+
+
+<ul>
+<% @actors.each do |actor| %>
+  <li>
+    <%= actor.name %>
+  </li>
+<% end %>
+</ul>
