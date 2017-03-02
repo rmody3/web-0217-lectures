@@ -41,7 +41,7 @@ Actor
 
 Main concept: whenever I put a foreign key on a table, I am telling an row of that table, that it only has one.
 
-Task: 
+Task:
 # GOAL: make a characters/new form, which takes in the charcter name, and creates
 # a new character with that name.
 # After it creates the character, redirect_to the characters show page,
